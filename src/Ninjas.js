@@ -7,7 +7,8 @@ const Ninjas = ({ ninjas }) => { //Destructure Props to Ninjas
                 <div>Name : {ninja.name}</div>
                 <div>Age : {ninja.age}</div>
                 <div>Place : {ninja.place}</div>
-                <hr />
+                <br />
+
             </div>
         )
     })

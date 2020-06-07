@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './fomantic-ui/dist/semantic.min.css'
+import 'fomantic-ui/dist/semantic.min.css'
 class AddNinja extends Component {
     state = {
         name: null,
@@ -18,15 +18,23 @@ class AddNinja extends Component {
     }
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" onChange={this.handleChange} />
-                    <label htmlFor="age">Age:</label>
-                    <input type="text" id="age" onChange={this.handleChange} />
-                    <label htmlFor="place">Place:</label>
-                    <input type="text" id="place" onChange={this.handleChange} />
-                    <button id="submit">Submit</button>
+            <div className="ui container">
+                <form onSubmit={this.handleSubmit} className="ui form">
+                    <div className="ui field">
+                        <label htmlFor="name">Name:</label>
+                        <input className="ui input" type="text" id="name" onChange={this.handleChange} />
+                    </div>
+                    <div className="ui field">
+                        <label htmlFor="age">Age:</label>
+                        <input className="ui input" type="text" id="age" onChange={this.handleChange} />
+                    </div>
+                    <div className="ui field">
+                        <label htmlFor="place">Place:</label>
+                        <input className="ui input" type="text" id="place" onChange={this.handleChange} />
+                    </div>
+                    <div className="ui field">
+                        <button className="ui button" id="submit">Submit</button>
+                    </div>
                 </form>
             </div>
         )

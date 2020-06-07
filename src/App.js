@@ -21,7 +21,7 @@ class App extends Component {
 
     return (
       <div className="App" >
-        <h1> Hey There! This is a sample app </h1>
+        <center><h1 className="ui header"> To DO App! Using Semantic </h1></center><br />
         <Ninjas ninjas={this.state.ninjas} />
         <AddNinja addNinja={this.addNinja} />
       </div>

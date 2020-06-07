@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import Ninjas from './Ninjas';
+import AddNinja from './AddNinja';
 
 class App extends Component {
 
   state = {
     ninjas: [
-      { name: 'Abi', age: 19, place: 'MDU', id: 1 },
-      { name: 'Joshi', age: 22, place: 'LA', id: 2 },
-      { name: 'Arul', age: 19, place: 'NMKL', id: 3 },
-      { name: 'Aadvik', age: 21, place: 'MAS', id: 4 }
+      { name: 'Abi', age: 19, place: 'MDU', id: 1 }
     ]
+  }
+  addNinja = (ninja) => {
+    ninja.id = Math.random();
+    let ninjas = [...this.state.ninjas, ninja] //Spread Operator
+    this.setState({
+      ninjas: ninjas
+    })
   }
   render() {
 
@@ -18,6 +23,7 @@ class App extends Component {
       <div className="App" >
         <h1> Hey There! This is a sample app </h1>
         <Ninjas ninjas={this.state.ninjas} />
+        <AddNinja addNinja={this.addNinja} />
       </div>
     );
   }

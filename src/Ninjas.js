@@ -8,9 +8,8 @@ const Ninjas = ({ ninjas }) => { //Destructure Props to Ninjas
                 <div>Age : {ninja.age}</div>
                 <div>Place : {ninja.place}</div>
                 <br />
-
             </div>
-        )
+        );
     })
     return (
         <div className="ninja-list">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'fomantic-ui/dist/semantic.min.css'
+//import 'fomantic-ui/dist/semantic.min.js'
 class AddNinja extends Component {
     state = {
         name: null,

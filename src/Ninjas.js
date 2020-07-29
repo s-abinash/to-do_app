@@ -8,8 +8,8 @@ const Ninjas = ({ ninjas, deleteNinja }) => { //Destructure Props to Ninjas
                 <center><div className="ui card">
                     <div className="ui center header">
                         Person {c++}
-                        <span className="ui right aligned text">
-                            <button id={ninja.id} onClick={() => deleteNinja(ninja.id)}><i className="trash icon"></i></button>
+                        <span>
+                            <i className="red trash icon" style={{position:'reative',float:'right',marginTop:'5px'}} id={ninja.id} onClick={() => deleteNinja(ninja.id)}></i>
                         </span></div>
                     <div>Name : {ninja.name}</div>
                     <div>Age : {ninja.age}</div>
